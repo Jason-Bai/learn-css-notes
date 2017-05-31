@@ -22,6 +22,7 @@
 三、可能的值
 
 | 值 | 描述 |
+| ---- | ---- |
 | _font-style_ | 规定字体样式。参阅：[font-style](/cssref/pr_font_font-style.asp "CSS font-style 属性") 中可能的值。 |
 | _font-variant_ | 规定字体异体。参阅：[font-variant](/cssref/pr_font_font-variant.asp "CSS font-variant 属性") 中可能的值。 |
 | _font-weight_ | 规定字体粗细。参阅：[font-weight](/cssref/pr_font_weight.asp "CSS font-weight 属性") 中可能的值。 |
