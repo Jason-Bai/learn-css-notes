@@ -34,3 +34,18 @@
 | message-box | 定义被对话框使用的字体。 |
 | small-caption | caption 字体的小型版本。 |
 | status-bar | 定义被窗口状态栏使用的字体。 |
+
+四、font-face
+
+我们知道早期的时候，我们只能通过font-family来设定安全的字体，目前CSS3提供了font-face形式，但是也会存在兼容性及安全的问题。
+
+```
+@font-face {
+  font-family: myfont;
+  src: url('xxxx');
+}
+
+div {
+  font-family: myfont;
+}
+```
