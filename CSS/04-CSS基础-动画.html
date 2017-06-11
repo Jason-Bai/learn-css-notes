@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+      .demo1 {
+      	width:100px;
+      	height:100px;
+      	background:red;
+      	position:relative;
+      	animation:myfirst 5s;
+      	-moz-animation:myfirst 5s; /* Firefox */
+      	-webkit-animation:myfirst 5s; /* Safari and Chrome */
+      	-o-animation:myfirst 5s; /* Opera */
+      }
+
+      .demo2 {
+      	width:100px;
+      	height:100px;
+      	background:red;
+      	position:relative;
+      	animation:mysecond 5s;
+      	-moz-animation:mysecond 5s; /* Firefox */
+      	-webkit-animation:mysecond 5s; /* Safari and Chrome */
+      	-o-animation:mysecond 5s; /* Opera */
+      }
+
+      @keyframes myfirst
+      {
+      	0%   {background:red; left:0px; top:0px;}
+      	25%  {background:yellow; left:200px; top:0px;}
+      	50%  {background:blue; left:200px; top:200px;}
+      	75%  {background:green; left:0px; top:200px;}
+      	100% {background:red; left:0px; top:0px;}
+      }
+
+      @-moz-keyframes myfirst /* Firefox */
+      {
+      	0%   {background:red; left:0px; top:0px;}
+      	25%  {background:yellow; left:200px; top:0px;}
+      	50%  {background:blue; left:200px; top:200px;}
+      	75%  {background:green; left:0px; top:200px;}
+      	100% {background:red; left:0px; top:0px;}
+      }
+
+      @-webkit-keyframes myfirst /* Safari and Chrome */
+      {
+      	0%   {background:red; left:0px; top:0px;}
+      	25%  {background:yellow; left:200px; top:0px;}
+      	50%  {background:blue; left:200px; top:200px;}
+      	75%  {background:green; left:0px; top:200px;}
+      	100% {background:red; left:0px; top:0px;}
+      }
+
+      @-o-keyframes myfirst /* Opera */
+      {
+      	0%   {background:red; left:0px; top:0px;}
+      	25%  {background:yellow; left:200px; top:0px;}
+      	50%  {background:blue; left:200px; top:200px;}
+      	75%  {background:green; left:0px; top:200px;}
+      	100% {background:red; left:0px; top:0px;}
+      }
+
+      @keyframes mysecond
+      {
+      	0%   {background:red; left:0px; top:0px;}
+      	25%  {background:yellow; left:0px; top:200px;}
+      	50%  {background:blue; left:200px; top:200px;}
+      	75%  {background:green; left:200px; top:0px;}
+      	100% {background:red; left:0px; top:0px;}
+      }
+
+      @-moz-keyframes mysecond /* Firefox */
+      {
+      	0%   {background:red; left:0px; top:0px;}
+      	25%  {background:yellow; left:0px; top:200px;}
+      	50%  {background:blue; left:200px; top:200px;}
+      	75%  {background:green; left:200px; top:0px;}
+      	100% {background:red; left:0px; top:0px;}
+      }
+
+      @-webkit-keyframes mysecond /* Safari and Chrome */
+      {
+      	0%   {background:red; left:0px; top:0px;}
+      	25%  {background:yellow; left:0px; top:200px;}
+      	50%  {background:blue; left:200px; top:200px;}
+      	75%  {background:green; left:200px; top:0px;}
+      	100% {background:red; left:0px; top:0px;}
+      }
+
+      @-o-keyframes mysecond /* Opera */
+      {
+      	0%   {background:red; left:0px; top:0px;}
+      	25%  {background:yellow; left:0px; top:200px;}
+      	50%  {background:blue; left:200px; top:200px;}
+      	75%  {background:green; left:200px; top:0px;}
+      	100% {background:red; left:0px; top:0px;}
+      }
+		</style>
+	</head>
+	<body>
+
+		<p><b>注释：</b>本例在 Internet Explorer 中无效。</p>
+
+		<div id="demo" class="demo1"></div>
+		<script>
+			const demo = document.querySelector('#demo');
+      setInterval(function () {
+
+        const className = demo.className;
+
+        if (className === 'demo1') {
+          demo.className = 'demo2';
+        } else {
+          demo.className = 'demo1';
+        }
+
+      }, 5000);
+      demo.addEventListener("click", function(){
+        demo.style.animationPlayState = 'paused';
+        console.log(demo.style);
+      });
+		</script>
+	</body>
+</html>
+
